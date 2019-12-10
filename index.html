@@ -1,9 +1,467 @@
-<!DOCTYPE html>
+
 <html>
-<head>
-	<title>Rivett Homepage</title>
-</head>
-<body>
-This page is live.
-</body>
+  <head>
+    <base target="_blank">
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Max Rivett</title>
+    <script defer src="//use.fontawesome.com/releases/v5.0.10/js/all.js"></script>
+  	<script defer src="//use.fontawesome.com/releases/v5.0.10/js/v4-shims.js"></script>
+  	<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+<style>
+@import url("//fonts.googleapis.com/css?family=Open+Sans:400,600,700");
+/*@import url("//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css"); */
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?pmz4ow');
+  src:  url('fonts/icomoon.eot?pmz4ow#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?pmz4ow') format('truetype'),
+    url('fonts/icomoon.woff?pmz4ow') format('woff'),
+    url('fonts/icomoon.svg?pmz4ow#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: "FontAwesome";
+    font-weight: normal;
+    font-style : normal;
+           src : url("//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.eot?v=4.7.0");
+           src : url("//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"),
+                 url("//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0") format("woff2"),
+                 url("//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.woff?v=4.7.0") format("woff"),
+                 url("//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.ttf?v=4.7.0") format("truetype"),
+                 url("//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
+}
+
+[class^="myicon-"], [class*=" myicon-"], label[for='tab2']:before {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.myicon-Javadoc:before {
+  content: "\e90f";
+}
+
+.myicon-Eflip:before {
+  content: "\e900";
+}
+
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+	overflow-y: scroll; /* Always show scrollbar to prevent re-centering */
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font: 14px/1 'Open Sans', sans-serif;
+  color: #555;
+  background: #eee;
+  min-width: 400px;
+}
+
+h1 {
+  padding: 50px 0;
+  font-weight: 400;
+  text-align: center;
+}
+
+p {
+  margin: 15px 25px 20px;
+  line-height: 1.5;
+}
+
+main {
+  min-width: 320px;
+  max-width: 1000px;
+  padding: 50px;
+  margin: 0 auto;
+  background: #fff;
+}
+
+section {
+  display: none;
+  padding: 20px 0 0;
+  border-top: 1px solid #ddd;
+}
+
+input {
+  display: none;
+}
+
+.center {
+	text-align: center;
+}
+
+a.nodecoration {
+	text-decoration: none;
+	color: #000;
+}
+
+a {
+  color: #3399ff;
+  text-decoration: none;
+  -webkit-transition: color 0.2s ease-out;
+  -moz-transition: color 0.2s ease-out;
+  -o-transition: color 0.2s ease-out;
+  -ms-transition: color 0.2s ease-out;
+  transition: color 0.2s ease-out;
+}
+
+a:hover {
+  color: #00ffff;
+  -webkit-transition: color 0.2s ease-out;
+  -moz-transition: color 0.2s ease-out;
+  -o-transition: color 0.2s ease-out;
+  -ms-transition: color 0.2s ease-out;
+  transition: color 0.2s ease-out;
+  text-decoration: none;
+}
+
+.awesomelink {
+	color: #888;
+}
+
+.awesomelink:hover {
+	color: #555;
+}
+
+label {
+  display: inline-block;
+  margin: 0 0 -1px;
+  padding: 15px 25px;
+  font-weight: 600;
+  text-align: center;
+  color: #bbb;
+  border: 1px solid transparent;
+  font-size: 15px;
+}
+
+label:before {
+  font-family: FontAwesome;
+  font-weight: normal;
+  margin-right: 10px;
+}
+
+label[for = 'tab0']:before {
+	content: '\f015';
+}
+
+label[for = 'tab1']:before {
+	content: '\f0c2';
+}
+
+label[for = 'tab2']:before {
+	content: '\e900';
+}
+
+label[for = 'tab3']:before {
+	content: '\f1b3';
+}
+
+label[for = 'tab4']:before {
+	content: '\f1b9';
+}
+
+label[for = 'tab5']:before {
+  content: '\f0f4';
+}
+
+label[for = 'tab6']:before {
+  content: '\f05b';
+}
+
+label[for = 'tab7']:before {
+  content: '\f07c';
+}
+
+label[for = 'tab8']:before {
+  content: '\f1b2';
+}
+
+label[for = 'tab9']:before {
+  content: '\f121';
+}
+
+label[for = 'tab10']:before {
+  content: '\f001';
+}
+
+label[for = 'tab11']:before {
+  content: '\f128';
+}
+
+label:hover {
+  color: #888;
+  cursor: pointer;
+}
+
+input:checked + label {
+  color: #555;
+  border: 1px solid #ddd;
+  border-top: 2px solid orange;
+  border-bottom: 1px solid #fff;
+}
+
+#tab0:checked ~ #content0,
+#tab1:checked ~ #content1,
+#tab2:checked ~ #content2,
+#tab3:checked ~ #content3,
+#tab4:checked ~ #content4,
+#tab5:checked ~ #content5,
+#tab6:checked ~ #content6,
+#tab7:checked ~ #content7,
+#tab8:checked ~ #content8,
+#tab9:checked ~ #content9,
+#tab10:checked ~ #content10,
+#tab11:checked ~ #content11 {
+  display: block;
+}
+
+/*@media (max-width: 400px) {
+    label {
+      font-size: 0;
+    }
+
+    label:before {
+      font-size: 36;
+    }
+}
+
+@media (min-width: 401px) {
+    label {
+      font-size: 15px;
+    }
+
+    label:before {
+      font-size: 15px;
+    }
+}
+*/
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    label {
+      font-size: 0;
+    }
+
+    label:before {
+      font-size: 36;
+    }
+
+    main {
+    	box-sizing: content-box;
+    }
+}
+
+    </style>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-81109993-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+    
+  </head>
+
+  <body>
+
+    <h1>Max Rivett</h1>
+
+<main>
+
+  <input id="tab0" type="radio" name="tabs" checked>
+  <label for="tab0">Home</label>
+
+  <input id="tab1" type="radio" name="tabs">
+  <label for="tab1">Tab 2</label>
+
+  <input id="tab2" type="radio" name="tabs">
+  <label for="tab2">Tab 3</label>
+
+  <input id="tab3" type="radio" name="tabs" style="display:none">
+  <label for="tab3" style="display:none">Tab 4</label>
+
+  <input id="tab4" type="radio" name="tabs">
+  <label for="tab4">Tab 5</label>
+
+  <input id="tab5" type="radio" name="tabs">
+  <label for="tab5">Tab 6</label>
+    
+  <input id="tab6" type="radio" name="tabs">
+  <label for="tab6">Tab 7</label>
+    
+  <input id="tab7" type="radio" name="tabs">
+  <label for="tab7">Tab 8</label>
+
+  <input id="tab8" type="radio" name="tabs">
+  <label for="tab8">Tab 9</label>
+
+  <input id="tab9" type="radio" name="tabs">
+  <label for="tab9">Tab 10</label>
+
+  <input id="tab10" type="radio" name="tabs">
+  <label for="tab10">Tab 11</label>
+
+  <input id="tab11" type="radio" name="tabs">
+  <label for="tab11">Tab 12</label>
+
+
+  <section id="content0">
+  <p>
+  	Hi, I am Max... blah blah blah
+  </p>
+
+  <div class="center" style="font-size: 7em">
+   
+    <a href="https://github.com/maxrivett" class="nodecoration" title="Github">
+      <i class="fa fa-github awesomelink"></i>
+    </a>
+  </div class="center">
+
+  <p>
+    Some notable projects: <br>
+    
+      <p style="margin-left: 40px">
+  		<b>Tab 1:</b> Description... blah blah
+  		</p>
+
+  		<p style="margin-left: 40px">
+  		<b>Tab 2:</b> Description... blah blah
+  		</p>
+
+  		<p style="margin-left: 40px">
+  		<b>Tab 3:</b> Description... blah blah
+  		</p>
+
+  	    <p style="margin-left: 40px">
+  		<b>Tab 4:</b> Description... blah blah
+  		</p>
+     <p style="margin-left: 40px">
+  		<b>Tab 5:</b> Description... blah blah
+  		</p>
+  	<p style="margin-left: 40px">
+  		<b>Tab 6:</b> Description... blah blah
+  	</p>
+
+  </p>
+  </section>
+
+  <section id="content1">
+<p>
+ Tab 1
+  <div class="center" style="font-size: 7em">
+    <a href="https://github.com/marcdubs/many-cloud" class="nodecoration" title="Github">
+      <i class="fa fa-github awesomelink"></i>
+    </a>
+    <a href="https://www.npmjs.com/package/many-cloud" class="nodecoration" title="NPM">
+      <i class="fab fa-npm awesomelink"></i>
+    </a>
+  </div class="center">
+</p>
+  </section>
+
+  <section id="content2">
+  <p>
+Tab 2
+</p>
+  	
+  </section>
+
+  <section id="content3">
+  <p>
+  	Tab 3<br>
+  </p>
+  </section>
+
+  <section id="content4">
+  <p>
+  	Tab 4
+  
+	</p>
+  </section>
+    
+  <section id="content5">
+    <p>
+    	Tab 5
+    </p>
+    
+  </section>
+    
+  <section id="content6">
+    <p>
+    <center>
+    	Tab 6
+    </center>
+    </p>
+  </section>
+    
+  <section id="content7">
+    <p>
+      <div class="center" style="font-size: 7em">
+        Tab 7
+      </div class="center"><br><br>
+    </p>
+  </section>
+
+  <section id="content8">
+  <p>
+
+  <div class="center" style="font-size: 7em">
+      Tab 8
+  </div class="center"><br><br>
+  <p>
+  <p style="margin-left: 40px">
+  </p>
+
+  <p>
+
+  </p>
+  </section>
+
+  <section id="content9">
+    <p>Tab 9</p>
+  </section>
+
+  <section id="content10">
+    <p>
+      <div class="center">Tab 10
+      </div class="center">
+    </p>
+  </section>
+
+  <section id="content11">
+    <p>Tab 11
+    </p>
+  </section>
+
+</main>
+    
+    
+    
+    
+    
+  </body>
 </html>
